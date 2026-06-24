@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maison - Welcome</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0; padding: 0; font-family: 'Montserrat', sans-serif;
+            background: url('https://images.unsplash.com/photo-1618220179428-22790b461013?q=80&w=1920') no-repeat center center fixed;
+            background-size: cover; height: 100vh; display: flex; justify-content: center; align-items: center;
+        }
+        .welcome-card {
+            background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(20px);
+            padding: 60px 40px; border-radius: 4px; text-align: center;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.05); border: 1px solid rgba(197, 168, 128, 0.25);
+            max-width: 420px; width: 90%;
+        }
+        h1 { font-family: 'Cinzel', serif; color: #111; letter-spacing: 6px; margin: 0 0 40px 0; font-size: 2.5rem; }
+        
+        input {
+            width: 100%; padding: 16px 20px; margin-bottom: 30px;
+            font-family: 'Montserrat', sans-serif; border: 1px solid rgba(0,0,0,0.15);
+            border-radius: 0; background: rgba(255,255,255,0.5); box-sizing: border-box; 
+            text-align: center; font-size: 0.9rem; letter-spacing: 2px; transition: all 0.3s;
+        }
+        input:focus { outline: none; border-color: #d4af37; background: #fff; }
+        input::placeholder { color: #aaa; letter-spacing: 1px; }
+
+        .btn-submit {
+            width: 100%; padding: 16px; margin: 12px 0; border: 1px solid #111;
+            background: transparent; color: #111; font-weight: 500; text-transform: uppercase;
+            letter-spacing: 2px; cursor: pointer; transition: all 0.4s ease; font-family: 'Montserrat', sans-serif; font-size: 0.8rem;
+        }
+        .btn-submit:hover { background: #111; color: #fff; transform: translateY(-2px); }
+    </style>
+</head>
+<body>
+    <div class="welcome-card">
+        <h1>MAISON</h1>
+        <form method="POST">
+            <input type="text" name="username" placeholder="ENTER YOUR NAME / أدخلي اسمكِ" required>
+            <button type="submit" name="lang" value="en" class="btn-submit">ENGLISH</button>
+            <button type="submit" name="lang" value="ar" class="btn-submit">العربية</button>
+        </form>
+    </div>
+</body>
+</html>

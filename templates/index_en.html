@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maison - Luxury Salon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --gold: #d4af37; --dark: #111111; }
+        body {
+            margin: 0; padding: 0; font-family: 'Montserrat', sans-serif;
+            background: url('https://images.unsplash.com/photo-1618220179428-22790b461013?q=80&w=1920') no-repeat center center fixed;
+            background-size: cover; display: flex; justify-content: center; align-items: center; height: 100vh; overflow: hidden;
+        }
+        .main-card {
+            background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(15px); padding: 60px 50px;
+            border-radius: 4px; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1); border: 1px solid rgba(214, 175, 55, 0.2);
+            max-width: 550px; width: 90%; text-align: center;
+        }
+        .welcome-msg { font-size: 0.8rem; letter-spacing: 3px; color: var(--gold); text-transform: uppercase; margin-bottom: 10px; font-weight: 500; }
+        h1 {
+            font-family: 'Cinzel', serif; font-size: 3rem; font-weight: 700; letter-spacing: 4px; margin: 0;
+            background: linear-gradient(45deg, #111 30%, #c5a880 70%, #111 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        .line-separator { width: 80px; height: 2px; background: linear-gradient(90deg, transparent, var(--gold), transparent); margin: 20px auto; position: relative; }
+        .line-separator::after { content: '✦'; position: absolute; top: -9px; left: 50%; transform: translateX(-50%); color: var(--gold); font-size: 12px; }
+        p { font-size: 1rem; letter-spacing: 4px; color: #444; margin-bottom: 40px; font-weight: 300; text-transform: uppercase; }
+        .btn-group { display: flex; gap: 20px; justify-content: center; }
+        .btn-luxury {
+            font-family: 'Montserrat', sans-serif; text-transform: uppercase; font-size: 0.8rem; font-weight: 500;
+            letter-spacing: 2px; padding: 16px 35px; border: 1px solid var(--dark); cursor: pointer; text-decoration: none; display: inline-block; transition: all 0.4s ease;
+        }
+        .btn-primary { background-color: var(--dark); color: #ffffff; }
+        .btn-primary:hover { background-color: var(--gold); border-color: var(--gold); transform: translateY(-3px); }
+        .btn-secondary { background-color: transparent; color: var(--dark); border-color: rgba(0,0,0,0.2); }
+        .btn-secondary:hover { background-color: var(--dark); color: #ffffff; transform: translateY(-3px); }
+    </style>
+</head>
+<body>
+    <div class="main-card">
+        <div class="welcome-msg">Welcome, {{ username }}</div>
+        <h1>Maison</h1>
+        <div class="line-separator"></div>
+        <p>Premium Luxury & Self-Care</p>
+        <div class="btn-group">
+            <a href="/booking/en" class="btn-luxury btn-primary">Book Now</a>
+            <a href="#" class="btn-luxury btn-secondary">Our Services</a>
+        </div>
+    </div>
+</body>
+</html>

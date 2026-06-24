@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختيار الخدمات - Maison</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cairo:wght@300;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --gold: #d4af37; --dark: #111111; }
+        body { margin: 0; padding: 60px 20px; font-family: 'Cairo', sans-serif; background: #fbf9f6; color: var(--dark); text-align: center; }
+        h1 { font-family: 'Cairo', sans-serif; font-size: 2.2rem; margin-bottom: 50px; font-weight: 500; }
+        .services-grid { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; max-width: 1200px; margin: 0 auto; }
+        .service-card { background: #ffffff; border-radius: 4px; overflow: hidden; width: 320px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); border: 1px solid rgba(197, 168, 128, 0.15); transition: all 0.4s ease; }
+        .service-card:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(214, 175, 55, 0.12); }
+        .service-img { width: 100%; height: 220px; object-fit: cover; }
+        .service-info { padding: 25px; text-align: right; }
+        .service-title { font-family: 'Cinzel', serif; font-size: 1.1rem; margin: 0 0 8px 0; font-weight: 600; letter-spacing: 1px; text-align: left; }
+        .service-price { color: var(--gold); font-weight: 500; margin-bottom: 20px; font-size: 0.95rem; text-align: left; direction: ltr; }
+        .select-btn { width: 100%; padding: 14px; background: transparent; border: 1px solid var(--dark); cursor: pointer; font-weight: 500; transition: all 0.3s; font-family: 'Cairo', sans-serif; font-size: 0.8rem; }
+        .select-btn:hover { background: var(--dark); color: #fff; }
+        .booking-form-section { margin-top: 60px; background: white; padding: 40px; max-width: 450px; margin-left: auto; margin-right: auto; border: 1px solid rgba(197, 168, 128, 0.2); }
+        input { width: 100%; padding: 14px 20px; margin: 10px 0 25px 0; border: 1px solid rgba(0,0,0,0.1); box-sizing: border-box; font-family: 'Cairo', sans-serif; text-align: center; }
+        .confirm-btn { background: var(--dark); color: white; width: 100%; padding: 16px; border: none; cursor: pointer; font-weight: 600; font-family: 'Cairo', sans-serif; font-size: 0.9rem; transition: background 0.3s; }
+        .confirm-btn:hover { background: var(--gold); }
+    </style>
+</head>
+<body>
+    <h1>اختاري خدماتكِ الفاخرة</h1>
+    <div class="services-grid">
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=600" class="service-img">
+            <div class="service-info">
+                <div class="service-title">Couture Hair Styling</div>
+                <div class="service-price">٤٥٠ ر.س</div>
+                <button class="select-btn" onclick="this.innerText=this.innerText=='تم الاختيار'?'اختيار الخدمة':'تم الاختيار'; this.style.background=this.innerText=='تم الاختيار'?'#111':'transparent'; this.style.color=this.innerText=='تم الاختيار'?'#fff':'#111';">اختيار الخدمة</button>
+            </div>
+        </div>
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1604654894610-df490688a50e?q=80&w=600" class="service-img">
+            <div class="service-info">
+                <div class="service-title">Luxury Nail Care</div>
+                <div class="service-price">٢٥٠ ر.س</div>
+                <button class="select-btn" onclick="this.innerText=this.innerText=='تم الاختيار'?'اختيار الخدمة':'تم الاختيار'; this.style.background=this.innerText=='تم الاختيار'?'#111':'transparent'; this.style.color=this.innerText=='تم الاختيار'?'#fff':'#111';">اختيار الخدمة</button>
+            </div>
+        </div>
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=600" class="service-img">
+            <div class="service-info">
+                <div class="service-title">Exquisite Makeup</div>
+                <div class="service-price">٦٠٠ ر.س</div>
+                <button class="select-btn" onclick="this.innerText=this.innerText=='تم الاختيار'?'اختيار الخدمة':'تم الاختيار'; this.style.background=this.innerText=='تم الاختيار'?'#111':'transparent'; this.style.color=this.innerText=='تم الاختيار'?'#fff':'#111';">اختيار الخدمة</button>
+            </div>
+        </div>
+    </div>
+    <div class="booking-form-section">
+        <h2 style="font-family: 'Cairo', sans-serif; font-size: 1.3rem; margin-top:0;">تحديد الموعد والوقت</h2>
+        <form action="/success">
+            <input type="datetime-local" required>
+            <button type="submit" class="confirm-btn">تأكيد حجز الموعد</button>
+        </form>
+    </div>
+</body>
+</html>
